@@ -9,6 +9,7 @@ function BG() {
   const [count, setCount] = useState(20)
 
   const customInit  = useCallback(async (engine: Engine) => {
+    // @ts-ignore
     await loadFull(engine)
   })
   return (
