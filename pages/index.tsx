@@ -12,6 +12,7 @@ import {
 import Link from 'next/link'
 import roboHi from "../pics/robo-hi.svg";
 import { roboAnimation } from '@/utils/animations'
+import { motion } from 'framer-motion';
 
 
 export default function Home() {
@@ -41,15 +42,24 @@ export default function Home() {
                 fontWeight={600}
                 fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
               >
-                <Text as={"span"} color={"blue.400"}>
+                <motion.div
+                
+                style={{display:"inline-block"}}
+                initial={{x:"-50vw", y:"-50vh"}}
+                animate={{x:"0", y:"0"}}
+                transition ={{ delay:0.5,duration:0.9, type: "spring"}}
+                >
                   Hi There ...!
-                </Text>
+                </motion.div>
                 <br />
                 <Text as={"span"} color={"blue.400"}>
                   I am{"  "}
                 </Text>
                 <Text
-                  as={"span"}
+                  as={motion.span}
+                  whileHover={{x:10}}
+                  // animation={{x:10}}
+                  display='inline-block'
                   position={"relative"}
                   zIndex= {9}
                   _after={{

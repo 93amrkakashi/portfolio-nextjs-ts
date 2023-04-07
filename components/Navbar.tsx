@@ -13,7 +13,9 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import Link from "next/link";
+import { Inter } from 'next/font/google'
 
+const inter = Inter({ subsets: ['latin'] })
 export function Links() {
   return (
     <>
@@ -26,9 +28,9 @@ export function Links() {
       <Box as={Link} href={"/Skills"} fontSize="15" fontWeight="bold">
         Skills
       </Box>
-      {/* <Box as={Link} href={"/Projects"} fontSize="15" fontWeight="bold">
+      <Box as={Link} href={"/Projects"} fontSize="15" fontWeight="bold">
         Projects
-      </Box> */}
+      </Box>
       <Box as={Link} href={"/Contact"} fontSize="15" fontWeight="bold">
         Contact
       </Box>
