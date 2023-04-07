@@ -110,12 +110,9 @@ export default function About() {
               p="5"
               m="5"
             >
-              <Box
-                as={"i"}
-                className={study.name}
-                color={study.col}
-                fontSize="40"
-              ></Box>
+              <Box fontSize="40" color={`${study.col}`}>
+                    {study.icon}
+                  </Box>
               <Heading as="h3" size="lg" color={study.col}>
                 {study.name}
               </Heading>
