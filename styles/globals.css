@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.text{
+  transform: rotate(320deg);
+}
+a{
+  transition: all 0.5s;
+}
+a:hover, a:focus{
+  color: #4299e1;
+}
+
+@media screen and (max-width: 500px) {
+  .contact{
+    flex-direction: column;
+  }
+}
