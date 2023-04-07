@@ -2,14 +2,12 @@ import { Box } from "@chakra-ui/react";
 import { useCallback, useState } from "react";
 import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'
-import type { Engine } from "tsparticles-engine";
 
 
 function BG() {
   const [count, setCount] = useState(20)
 
-  const customInit  = useCallback(async (engine: Engine) => {
-    // @ts-ignore
+  const customInit  = useCallback(async (engine) => {
     await loadFull(engine)
   })
   return (
