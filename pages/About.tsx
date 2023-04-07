@@ -5,12 +5,19 @@ import {
   Flex,
   Text,
   Heading,
+  Icon,
   Image as ImageN,
   useColorModeValue,
 } from "@chakra-ui/react";
 import Head from "next/head";
 import Image from "next/image";
 import roboHero from "../pics/robo-hero.svg";
+import {
+  FaCss3Alt,
+  FaHtml5,
+  FaReact,
+} from "react-icons/fa";
+import { SiJavascript } from "react-icons/si";
 
 export default function About() {
   return (
@@ -105,7 +112,7 @@ export default function About() {
             >
               <Box
                 as={"i"}
-                className={study.icon}
+                className={study.name}
                 color={study.col}
                 fontSize="40"
               ></Box>
@@ -125,25 +132,25 @@ export const studies = [
   {
     name: "HTML",
     col: "orange.400",
-    icon: "fa-brands fa-html5",
+    icon: <Icon as={FaHtml5} />,
     p: "The first thing I started with was HTML. it didnt take much time to learn but diving into the language took some time.",
   },
   {
     col: "blue.400",
     name: "CSS",
-    icon: "fa-brands fa-css3",
+    icon: <Icon as={FaCss3Alt} />,
     p: "Then, the CSS, it isn't really that hard. but it's pretty big, in the end you find that what you can do with it is really great.",
   },
   {
     col: "yellow.400",
     name: "JS",
-    icon: "fa-brands fa-js",
+    icon: <Icon as={SiJavascript} />,
     p: "Then, the JavaScript, It may be difficult. Variables, functions, loops and many other things that seem really hard , but in the end it's all worth it",
   },
   {
     col: "blue.400",
     name: "REACT",
-    icon: "fa-brands fa-react",
+    icon: <Icon as={FaReact} />,
     p: `After that comes the framework and some other technologies such as React,
      It is the stage of transition beyond the basic language where there is a new world of development`,
   },
