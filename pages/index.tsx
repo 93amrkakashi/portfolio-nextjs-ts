@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from "next/head";
+import Image from "next/image";
 import {
   Stack,
   Flex,
@@ -8,12 +8,12 @@ import {
   Button,
   Image as ImageN,
   useColorModeValue,
+  calc,
 } from "@chakra-ui/react";
-import Link from 'next/link'
+import Link from "next/link";
 import roboHi from "../pics/robo-hi.svg";
-import { roboAnimation } from '@/utils/animations'
-import { motion } from 'framer-motion';
-
+import { roboAnimation } from "@/utils/animations";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -25,43 +25,49 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Stack
-        w="100%"
-        h="100%"
+        w={"100%"}
+        height={"100%"}
         bg={useColorModeValue("gray.200", "gray.700")}
         px={10}
+        display="flex"
+        align={"center"}
+        justify="center"
       >
-          <Stack
-            align={"center"}
-            spacing={{ base: 8, md: 10 }}
-            py={{ base: 10, md: 18 }}
-            direction={{ base: "column", md: "row" }}
-          >
-            <Stack  flex={1} spacing={{ base: 5, md: 10 }}>
-              <Heading
-                lineHeight={1.1}
-                fontWeight={600}
-                fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
+        <Stack
+          align={"center"}
+          spacing={{ base: 8, md: 10 }}
+          py={{ base: 10, md: 18 }}
+          direction={{ base: "column", md: "row" }}
+        >
+          <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+            <Heading
+              lineHeight={1.1}
+              fontWeight={600}
+              fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
+            >
+              <motion.div
+                style={{ display: "inline-block" }}
+                initial={{ x: "-50vw", y: "-50vh" }}
+                animate={{ x: "0", y: "0" }}
+                transition={{ delay: 0.3, duration: 0.9, type: "spring" }}
               >
-                <motion.div
-                
-                style={{display:"inline-block"}}
-                initial={{x:"-50vw", y:"-50vh"}}
-                animate={{x:"0", y:"0"}}
-                transition ={{ delay:0.5,duration:0.9, type: "spring"}}
-                >
-                  Hi There ...!
-                </motion.div>
-                <br />
+                Hi There ...!
+              </motion.div>
+              <br />
+              <motion.div
+                initial={{ x: "100vw", y: "100vh" }}
+                animate={{ x: "0", y: "0" }}
+                transition={{ delay: 0.5, duration: 0.9, type: "spring" }}
+              >
                 <Text as={"span"} color={"blue.400"}>
                   I am{"  "}
                 </Text>
                 <Text
                   as={motion.span}
-                  whileHover={{x:10}}
-                  // animation={{x:10}}
-                  display='inline-block'
+                  whileHover={{ x: 10 }}
+                  display="inline-block"
                   position={"relative"}
-                  zIndex= {9}
+                  zIndex={9}
                   _after={{
                     content: "''",
                     width: "full",
@@ -75,20 +81,30 @@ export default function Home() {
                 >
                   Amr Ali
                 </Text>
-              </Heading>
-              <Text colorScheme={"facebook"} fontSize="22">
-                A React.js Frontend Web Developer. <br />
-                 I am a rising talent in the web development world. <br />
-                 I have a passion for developing
-                and designing web applications and exploring more in this world
-                that I love.
-                <br />I like using React to build responsive websites that are
-                responsive to all screens, and I have a constant thirst for
-                problem solving and getting into programming challenges.
-              </Text>
-              <Stack
-                spacing={{ base: 4, sm: 6 }}
-                direction={{ base: "column", sm: "row" }}
+              </motion.div>
+            </Heading>
+            <motion.p
+              style={{ fontSize: 20 }}
+              initial={{ y: "100vh" }}
+              animate={{ y: "0" }}
+              transition={{ delay: 0.6, duration: 0.9, type: "spring" }}
+            >
+              A React.js Frontend Web Developer. <br />
+              I am a rising talent in the web development world. <br />
+              I have a passion for developing and designing web applications and
+              exploring more in this world that I love.
+              <br />I like using React to build responsive websites that are
+              responsive to all screens, and I have a constant thirst for
+              problem solving and getting into programming challenges.
+            </motion.p>
+            <Stack
+              spacing={{ base: 4, sm: 6 }}
+              direction={{ base: "column", sm: "row" }}
+            >
+              <motion.div
+                initial={{ x: "100vw" }}
+                animate={{ x: "0" }}
+                transition={{ delay: 0.7, duration: 0.5 }}
               >
                 <Button
                   as={Link}
@@ -103,28 +119,35 @@ export default function Home() {
                 >
                   More About Me
                 </Button>
-              </Stack>
+              </motion.div>
             </Stack>
-            <Flex
-              flex={1}
-              justify={"center"}
-              align={"center"}
-              position={"relative"}
-              w={{ base: "100%", md: "100", sm: "50%" }}
+          </Stack>
+          <Flex
+            flex={1}
+            justify={"center"}
+            align={"center"}
+            position={"relative"}
+            w={{ base: "100%", md: "100", sm: "50%" }}
+          >
+            <motion.div
+              initial={{ y: "70vh", scale: 0.1, x:"20vw" }}
+              animate={{ y: "0", scale: 1.2 ,x:"0"}}
+              transition={{ delay: 0.2, duration: 2, type: "spring" }}
             >
               <ImageN
-              as={Image}
-              w="250"
-              objectFit="cover"
-              alt="noooo"
+                as={Image}
+                w="250"
+                objectFit="cover"
+                alt="noooo"
                 fit={"cover"}
                 align={"center"}
                 src={roboHi}
                 animation={roboAnimation}
               />
-            </Flex>
-          </Stack>
+            </motion.div>
+          </Flex>
         </Stack>
+      </Stack>
     </>
-  )
+  );
 }

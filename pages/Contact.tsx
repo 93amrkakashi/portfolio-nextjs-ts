@@ -38,6 +38,7 @@ function Contact() {
         minH={"100%"}
         bg={useColorModeValue("gray.200", "gray.600")}
         px={10}
+        py={55}
       >
         <Box w="100%" pos={"relative"}>
           <Center

@@ -18,6 +18,7 @@ import {
   FaReact,
 } from "react-icons/fa";
 import { SiJavascript } from "react-icons/si";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
@@ -30,9 +31,10 @@ export default function About() {
       </Head>
       <Stack
         w="100%"
-        h="100%"
+        minH="100vh"
         bg={useColorModeValue("gray.200", "gray.700")}
         px={10}
+        py="55px"
       >
         <Stack
           align={"center"}
@@ -40,11 +42,17 @@ export default function About() {
           py={{ base: 10, md: 18 }}
           direction={{ base: "column", md: "row" }}
         >
-          <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+          <Stack flex={2} spacing={{ base: 5, md: 10 }}>
+          <motion.div
+            style={{ fontSize: 18 }}
+            initial={{ y: "-50vh" }}
+            animate={{ y: "0" }}
+            transition={{ delay: 0.2, duration: 0.5, type: "spring" }}
+            >
             <Heading
               lineHeight={1.1}
               fontWeight={600}
-              fontSize={{ base: "40", sm: "40", lg: "30" }}
+              fontSize={{ base: 25, sm: 25, lg: 40 }}
             >
               <Text as={"span"} color={"blue.400"}>
                 Let me introduce myself !
@@ -61,6 +69,13 @@ export default function About() {
                 A front end developer, based in Egypt.{"  "}
               </Text>
             </Heading>
+            </motion.div>
+            <motion.div
+            style={{ fontSize: 18 }}
+            initial={{ y: "100vh" }}
+            animate={{ y: "0" }}
+            transition={{ delay: 0.3, duration: 0.5, type: "spring" }}
+            >
             <Text color={"black.400"}>
               The part that might be funny, That in fact I have a bachelor
               degree in social work! <br /> Social work is awesome but I did not
@@ -71,6 +86,7 @@ export default function About() {
               courses and bootcamps, in addition to reading in several
               documents.
             </Text>
+            </motion.div>
             <Stack
               spacing={{ base: 4, sm: 6 }}
               direction={{ base: "column", sm: "row" }}
@@ -83,6 +99,11 @@ export default function About() {
             position={"relative"}
             w={{ base: "90%", md: "90", sm: "50%" }}
           >
+            <motion.div
+              initial={{ y: "70vh", scale: 0.1, x:"20vw" }}
+              animate={{ y: "0", scale: 1.5 ,x:"0"}}
+              transition={{ delay: 0.2, duration: 2, type: "spring" }}
+            >
             <ImageN
               as={Image}
               w="250"
@@ -92,14 +113,20 @@ export default function About() {
               align={"center"}
               src={roboHero}
               animation={roboAnimation}
-            />
+              />
+              </motion.div>
           </Flex>
         </Stack>
 
         <Flex justify="center" gap={"5"} wrap="wrap" align={"center"}>
           {studies.map((study) => (
-            <Flex
-              key={study.name}
+            <motion.div
+            key={study.name}
+            initial={{ y: "70vh" }}
+              animate={{ y: "0" }}
+              transition={{ delay: 0.5, duration: 2, type: "spring" }}
+            >
+              <Flex
               alignItems="center"
               flexDirection={"column"}
               textAlign="center"
@@ -118,6 +145,8 @@ export default function About() {
               </Heading>
               <Text>{study.p}</Text>
             </Flex>
+              </motion.div>
+            
           ))}
         </Flex>
       </Stack>

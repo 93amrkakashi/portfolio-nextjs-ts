@@ -7,6 +7,7 @@ import Repo from "@/components/Repo";
 function Projects() {
   return (
     <>
+    <Stack py="55px" bg={useColorModeValue("gray.200", "gray.700")}>
     <Text
             fontSize={{ sm: "30" }}
             fontWeight="700"
@@ -27,6 +28,7 @@ function Projects() {
         
         <Repo />
       </Flex>
+      </Stack>
     </>
   );
 }
