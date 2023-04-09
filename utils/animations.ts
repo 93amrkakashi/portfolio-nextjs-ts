@@ -21,3 +21,24 @@ export const animation = keyframes`
 
 
 export const roboAnimation = `${animation} infinite 2s`;
+
+
+
+
+
+export const repoVarient ={
+  start:{
+    opacity:0,
+    y:"90vh",
+  },
+  end:{
+    opacity:1,
+    y:"0"
+  },
+  textUpStart:{
+    y:"100vh"
+  },
+  textUpEnd:{
+    y:"0"
+  },
+}

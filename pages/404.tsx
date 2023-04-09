@@ -1,4 +1,4 @@
-import { roboAnimation } from "@/utils/animations";
+import { repoVarient, roboAnimation } from "@/utils/animations";
 import {
   Box,
   Flex,
@@ -11,6 +11,7 @@ import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 import roboGear from "../pics/robo-gear.svg";
+import {motion} from "framer-motion";
 
 const Error = () => {
   return (
@@ -31,6 +32,12 @@ const Error = () => {
         justify="center"
       >
         <Box w="100%" h="90%" p="8" marginBottom="20px">
+          <motion.div
+          variants={repoVarient}
+          initial="textUpStart"
+          animate="textUpEnd"
+          transition={{delay:0.3, duration:0.6, type:"spring", stiffness:120}}
+          >
           <Text
             fontSize={{ sm: "20", md: "30", lg: "40" }}
             fontWeight="700"
@@ -39,6 +46,15 @@ const Error = () => {
           >
             OOPS !!!
           </Text>
+            </motion.div>
+
+            <motion.div
+          variants={repoVarient}
+          initial="textUpStart"
+          animate="textUpEnd"
+          transition={{delay:0.2, duration:0.6, type:"spring", stiffness:120}}
+          >
+
           <Text
             fontSize={{ sm: "20", md: "30", lg: "40" }}
             fontWeight="700"
@@ -47,7 +63,14 @@ const Error = () => {
           >
             This Page Does Not Exsist !!!
           </Text>
+          </motion.div>
 
+          <motion.div 
+            variants={repoVarient}
+            initial="start"
+            animate="end"
+            transition={{delay:0.2, duration:0.7, type:"spring", stiffness:120}}
+          >
           <Flex
             w={{
               base: "30%",
@@ -56,6 +79,7 @@ const Error = () => {
               isSmallerThn300px: "100%",
             }}
             justify="center"
+            marginTop="50px"
           >
             <ImageN
               as={Image}
@@ -65,6 +89,7 @@ const Error = () => {
               animation={roboAnimation}
             />
           </Flex>
+          </motion.div>
         </Box>
       </Stack>
     </>

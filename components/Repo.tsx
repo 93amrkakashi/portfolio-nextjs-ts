@@ -8,17 +8,9 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FaCode, FaEye } from "react-icons/fa";
 import {motion} from "framer-motion";
+import { repoVarient } from "@/utils/animations";
 
-export const repoVarient ={
-  start:{
-    opacity:0,
-    y:"90vh",
-  },
-  end:{
-    opacity:1,
-    y:"0"
-  }
-}
+
 
 
 function Repo() {
