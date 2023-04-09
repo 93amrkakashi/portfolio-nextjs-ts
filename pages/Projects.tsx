@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 // import Navbar from "../layout/Navbar";
 import { Flex, Image, Stack, Text, useColorModeValue } from "@chakra-ui/react";
-import Repo, { divVarient } from "@/components/Repo";
+import Repo from "@/components/Repo";
 // import Repo from "../layout/Repo";
 import {motion} from "framer-motion";
 

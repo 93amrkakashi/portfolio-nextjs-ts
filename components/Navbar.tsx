@@ -13,10 +13,8 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import Link from "next/link";
-import { Inter } from "next/font/google";
 import { motion } from "framer-motion";
 
-const inter = Inter({ subsets: ["latin"] });
 export function Links() {
   return (
     <>

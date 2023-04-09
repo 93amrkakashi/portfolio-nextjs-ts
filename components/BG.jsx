@@ -5,7 +5,7 @@ import { loadFull } from 'tsparticles'
 
 
 function BG() {
-  const [count, setCount] = useState(20)
+  const [count, setCount] = useState(40)
 
   const customInit  = useCallback(async (engine) => {
     await loadFull(engine)
