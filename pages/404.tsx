@@ -1,4 +1,4 @@
-import { repoVarient, roboAnimation } from "@/utils/animations";
+import { divVarient, roboAnimation } from "@/utils/animations";
 import {
   Box,
   Flex,
@@ -33,7 +33,7 @@ const Error = () => {
       >
         <Box w="100%" h="90%" p="8" marginBottom="20px">
           <motion.div
-          variants={repoVarient}
+          variants={divVarient}
           initial="textUpStart"
           animate="textUpEnd"
           transition={{delay:0.3, duration:0.6, type:"spring", stiffness:120}}
@@ -49,7 +49,7 @@ const Error = () => {
             </motion.div>
 
             <motion.div
-          variants={repoVarient}
+          variants={divVarient}
           initial="textUpStart"
           animate="textUpEnd"
           transition={{delay:0.2, duration:0.6, type:"spring", stiffness:120}}
@@ -66,7 +66,7 @@ const Error = () => {
           </motion.div>
 
           <motion.div 
-            variants={repoVarient}
+            variants={divVarient}
             initial="start"
             animate="end"
             transition={{delay:0.2, duration:0.7, type:"spring", stiffness:120}}

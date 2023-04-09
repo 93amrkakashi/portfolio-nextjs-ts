@@ -36,8 +36,9 @@ import boot from "../pics/boot.svg";
 import word from "../pics/word.svg";
 import pug from "../pics/pug.svg";
 import Image from "next/image";
-import { roboAnimation } from "@/utils/animations";
+import { divVarient, roboAnimation } from "@/utils/animations";
 import Head from "next/head";
+import {motion} from "framer-motion";
 
 interface Props {
   label: string;
@@ -64,6 +65,12 @@ function Skills() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Stack py="55px" bg={useColorModeValue("gray.200", "gray.700")}>
+      <motion.div 
+            variants={divVarient}
+            initial="skillStart"
+            animate="skillEnd"
+            transition={{delay:0.4, duration:0.7, type:"spring", stiffness:120}}
+          >
         <Box w="100%" h="90%" p="8" marginBottom="20px">
           <Text
             fontSize={{ sm: "30" }}
@@ -89,6 +96,12 @@ function Skills() {
               }}
               justify="center"
             >
+              <motion.div 
+            variants={divVarient}
+            initial="roboStart"
+            animate="roboEnd"
+            transition={{delay: 0.2, duration: 2, type: "spring", stiffness:120}}
+          >
               <ImageN
                 as={Image}
                 w="250px"
@@ -98,6 +111,7 @@ function Skills() {
                 scaleX={"-1"}
                 animation={roboAnimation}
               />
+              </motion.div>
             </Flex>
             <Flex
               justify="space-around"
@@ -117,8 +131,15 @@ function Skills() {
             </Flex>
           </Flex>
         </Box>
+        </motion.div>
         <br />
         {/* /////////////////////////// */}
+        <motion.div 
+            variants={divVarient}
+            initial="skillStart"
+            animate="skillEnd"
+            transition={{delay:0.6, duration:1, type:"spring", stiffness:120}}
+          >
         <Box w="100%" h="90%" p="8" marginBottom="20px">
           <Text
             fontSize={{ sm: "35" }}
@@ -144,6 +165,12 @@ function Skills() {
               }}
               justify="center"
             >
+              <motion.div 
+            variants={divVarient}
+            initial="roboStart"
+            animate="roboEnd"
+            transition={{delay: 0.5, duration: 2, type: "spring", stiffness:120}}
+          >
               <ImageN
                 as={Image}
                 w="250px"
@@ -151,6 +178,7 @@ function Skills() {
                 src={roboGear}
                 animation={roboAnimation}
               />
+              </motion.div>
             </Flex>
             <Flex
               justify="space-around"
@@ -173,9 +201,15 @@ function Skills() {
             </Flex>
           </Flex>
         </Box>
+        </motion.div>
         <br />
         {/* /////////////////////////// */}
-
+        <motion.div 
+            variants={divVarient}
+            initial="skillStart"
+            animate="skillEnd"
+            transition={{delay:0.8, duration:1.2, type:"spring", stiffness:120}}
+          >  
         <Box w="100%" h="90%" p="8">
           <Text
             marginTop="15px"
@@ -202,6 +236,12 @@ function Skills() {
               }}
               justify="center"
             >
+              <motion.div 
+            variants={divVarient}
+            initial="roboStart"
+            animate="roboEnd"
+            transition={{delay: 0.7, duration: 2, type: "spring", stiffness:120}}
+          >
               <ImageN
                 as={Image}
                 w="250px"
@@ -211,6 +251,7 @@ function Skills() {
                 scaleX={"-1"}
                 animation={roboAnimation}
               />
+              </motion.div>
             </Flex>
             <Flex
               justify="space-around"
@@ -231,6 +272,7 @@ function Skills() {
             </Flex>
           </Flex>
         </Box>
+        </motion.div>
       </Stack>
     </div>
   );

@@ -21,7 +21,8 @@ import { useMediaQuery } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
-import { roboAnimation } from "@/utils/animations";
+import { divVarient, roboAnimation } from "@/utils/animations";
+import { motion } from "framer-motion";
 
 function Contact() {
   const [isSmallerThn300px] = useMediaQuery("(max-width: 300px)");
@@ -65,15 +66,27 @@ function Contact() {
             flexDir={{ md: "row", sm: "column" }} // dont forget to make extra small
           >
             <Flex w={{ md: "40%", sm: "100%" }} zIndex="5" justify="center">
-              <ImageN
-                as={Image}
-                alt="noooo"
-                className="robo"
-                w="250"
-                objectFit="cover"
-                src={roboLove}
-                animation={roboAnimation}
-              />
+              <motion.div
+                variants={divVarient}
+                initial="roboStart"
+                animate="roboEnd"
+                transition={{
+                  delay: 0.5,
+                  duration: 1.5,
+                  type: "spring",
+                  stiffness: 120,
+                }}
+              >
+                <ImageN
+                  as={Image}
+                  alt="noooo"
+                  className="robo"
+                  w="250"
+                  objectFit="cover"
+                  src={roboLove}
+                  animation={roboAnimation}
+                />
+              </motion.div>
             </Flex>
 
             <Flex
@@ -85,35 +98,48 @@ function Contact() {
               zIndex="5"
             >
               {socials.map((social) => (
-                <Box
-                  as={Link}
-                  href={social.link}
-                  target="_blank"
+                <motion.div
                   key={social.id}
-                  border="1px"
-                  borderRadius="lg"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="space-around"
-                  flexDir="column"
-                  boxShadow="2xl"
-                  p="5"
-                  w="210px"
-                  minH="220px"
-                  m="3"
-                  _hover={{ color: `${social.color}.600` }}
+                  variants={divVarient}
+                  initial="skillStart"
+                  animate="skillEnd"
+                  transition={{
+                    delay: 0.5,
+                    duration: 1.5,
+                    type: "spring",
+                    stiffness: 120,
+                  }}
                 >
-                  <Box fontSize="50" color={`${social.color}.600`}>
-                    {social.icon}
+                  <Box
+                    as={Link}
+                    href={social.link}
+                    target="_blank"
+                    key={social.id}
+                    border="1px"
+                    borderRadius="lg"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="space-around"
+                    flexDir="column"
+                    boxShadow="2xl"
+                    p="5"
+                    w="210px"
+                    minH="220px"
+                    m="3"
+                    _hover={{ color: `${social.color}.600` }}
+                  >
+                    <Box fontSize="50" color={`${social.color}.600`}>
+                      {social.icon}
+                    </Box>
+                    {/* <Icon as={MdSettings} /> */}
+                    <Text fontSize={25} fontWeight={700}>
+                      {social.name}
+                    </Text>
+                    <Text fontWeight={500} textAlign={"center"} py="5">
+                      {social.p}
+                    </Text>
                   </Box>
-                  {/* <Icon as={MdSettings} /> */}
-                  <Text fontSize={25} fontWeight={700}>
-                    {social.name}
-                  </Text>
-                  <Text fontWeight={500} textAlign={"center"} py="5">
-                    {social.p}
-                  </Text>
-                </Box>
+                </motion.div>
               ))}
             </Flex>
           </Flex>

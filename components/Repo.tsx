@@ -8,7 +8,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FaCode, FaEye } from "react-icons/fa";
 import {motion} from "framer-motion";
-import { repoVarient } from "@/utils/animations";
+import { divVarient } from "@/utils/animations";
 
 
 
@@ -20,7 +20,7 @@ function Repo() {
       {repos?.map((repo) => {
         return (
           <motion.div key={repo.id} className="div"
-            variants={repoVarient}
+            variants={divVarient}
             initial="start"
             animate="end"
             transition={{delay:0.5, duration:0.9, type:"spring", stiffness:120}}
