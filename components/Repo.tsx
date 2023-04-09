@@ -7,8 +7,18 @@ import {
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FaCode, FaEye } from "react-icons/fa";
+import {motion} from "framer-motion";
 
-
+export const repoVarient ={
+  start:{
+    opacity:0,
+    y:"90vh",
+  },
+  end:{
+    opacity:1,
+    y:"0"
+  }
+}
 
 
 function Repo() {
@@ -17,7 +27,13 @@ function Repo() {
     <>
       {repos?.map((repo) => {
         return (
-          <Flex
+          <motion.div key={repo.id} className="div"
+            variants={repoVarient}
+            initial="start"
+            animate="end"
+            transition={{delay:0.5, duration:0.9, type:"spring", stiffness:120}}
+          >
+            <Flex
             key={repo.id}
             border="1px"
             borderRadius="lg"
@@ -44,6 +60,9 @@ function Repo() {
               </Link>
             </Flex>
           </Flex>
+          </motion.div>
+          
+
         );
       })}
     </>

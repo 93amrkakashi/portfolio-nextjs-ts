@@ -10,7 +10,7 @@ export const animation = keyframes`
 
 
 55%{
-  transform: translateY(25px)
+  transform: translateY(0px)
 }
 
 100%{

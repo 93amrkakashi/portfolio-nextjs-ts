@@ -20,6 +20,9 @@ import {
 import { SiJavascript } from "react-icons/si";
 import { motion } from "framer-motion";
 
+
+
+
 export default function About() {
   return (
     <>
@@ -101,7 +104,7 @@ export default function About() {
           >
             <motion.div
               initial={{ y: "70vh", scale: 0.1, x:"20vw" }}
-              animate={{ y: "0", scale: 1.5 ,x:"0"}}
+              animate={{ y: "0", scale: 1 ,x:"0"}}
               transition={{ delay: 0.2, duration: 2, type: "spring" }}
             >
             <ImageN

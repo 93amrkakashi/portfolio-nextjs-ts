@@ -131,7 +131,7 @@ export default function Home() {
           >
             <motion.div
               initial={{ y: "70vh", scale: 0.1, x:"20vw" }}
-              animate={{ y: "0", scale: 1.2 ,x:"0"}}
+              animate={{ y: "0", scale: 1 ,x:"0"}}
               transition={{ delay: 0.2, duration: 2, type: "spring" }}
             >
               <ImageN
