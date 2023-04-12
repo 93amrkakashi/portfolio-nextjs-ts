@@ -9,7 +9,7 @@ import {
   Center,
   useColorModeValue,
 } from "@chakra-ui/react";
-import roboLove from "../pics/robo-love.svg";
+import robophone from "../pics/robo-phone.svg";
 import {
   FaFacebook,
   FaGithub,
@@ -83,7 +83,7 @@ function Contact() {
                   className="robo"
                   w="250"
                   objectFit="cover"
-                  src={roboLove}
+                  src={robophone}
                   animation={roboAnimation}
                 />
               </motion.div>

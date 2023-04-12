@@ -8,10 +8,9 @@ import {
   Button,
   Image as ImageN,
   useColorModeValue,
-  calc,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import roboHi from "../pics/robo-hi.svg";
+import robolove from "../pics/robo-love.svg";
 import { roboAnimation } from "@/utils/animations";
 import { motion } from "framer-motion";
 
@@ -141,7 +140,7 @@ export default function Home() {
                 alt="noooo"
                 fit={"cover"}
                 align={"center"}
-                src={roboHi}
+                src={robolove}
                 animation={roboAnimation}
               />
             </motion.div>

@@ -10,8 +10,9 @@ import {
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
-import roboGear from "../pics/robo-gear.svg";
+import err from "../pics/404.svg";
 import {motion} from "framer-motion";
+import Link from "next/link";
 
 const Error = () => {
   return (
@@ -85,11 +86,26 @@ const Error = () => {
               as={Image}
               w="250px"
               objectFit="cover"
-              src={roboGear}
+              src={err}
               animation={roboAnimation}
             />
           </Flex>
           </motion.div>
+          <motion.div
+          variants={divVarient}
+          initial="textUpStart"
+          animate="textUpEnd"
+          transition={{delay:0.3, duration:0.6, type:"spring", stiffness:120}}
+          >
+          <Text
+            fontSize={{ sm: "20", md: "30", lg: "40" }}
+            fontWeight="700"
+            textAlign="center"
+            h="50px"
+          >
+            <Link href="/" >Back to HomePage</Link>
+          </Text>
+            </motion.div>
         </Box>
       </Stack>
     </>

@@ -25,7 +25,7 @@ import yarn from "../pics/yarn.svg";
 import npm from "../pics/npm.svg";
 import mat from "../pics/mat.svg";
 import chakra from "../pics/chakra.svg";
-import node from "../pics/node-js.svg";
+import node from "../pics/node.svg";
 import roboGood from "../pics/robo-good.svg";
 import roboGear from "../pics/robo-gear.svg";
 import roboStudy from "../pics/robo-study.svg";
