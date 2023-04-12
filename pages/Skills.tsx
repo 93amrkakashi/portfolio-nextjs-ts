@@ -35,6 +35,8 @@ import express from "../pics/express.svg";
 import boot from "../pics/boot.svg";
 import word from "../pics/word.svg";
 import pug from "../pics/pug.svg";
+import vite from "../pics/vite.svg";
+import pwa from "../pics/pwa.svg";
 import Image from "next/image";
 import { divVarient, roboAnimation } from "@/utils/animations";
 import Head from "next/head";
@@ -191,13 +193,15 @@ function Skills() {
               <Skill label="NODE PACKAGE MANAGER" src={npm} />
               <Skill label="YARN" src={yarn} />
               <Skill label="GIT" src={git} />
-              <Skill label="GIT HUB" src={github} />
+              <Skill label="GITHUB" src={github} />
               <Skill label="FIREBASE" src={fire} />
-              <Skill label="GULP JS" src={gulp} />
-              <Skill label="PUG JS" src={pug} />
+              <Skill label="GULP.JS" src={gulp} />
+              <Skill label="PUG.JS" src={pug} />
               <Skill label="CHAKRA UI" src={chakra} />
               <Skill label="MATERIAL UI" src={mat} />
               <Skill label="BOOTSTRAP 5" src={boot} />
+              <Skill label="VITE JS" src={vite} />
+              <Skill label="Progressive Web Apps" src={pwa} />
             </Flex>
           </Flex>
         </Box>
