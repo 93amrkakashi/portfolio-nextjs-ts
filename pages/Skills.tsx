@@ -37,6 +37,7 @@ import word from "../pics/word.svg";
 import pug from "../pics/pug.svg";
 import vite from "../pics/vite.svg";
 import pwa from "../pics/pwa.svg";
+import post from "../pics/postman.svg";
 import Image from "next/image";
 import { divVarient, roboAnimation } from "@/utils/animations";
 import Head from "next/head";
