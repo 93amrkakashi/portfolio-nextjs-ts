@@ -203,6 +203,7 @@ function Skills() {
               <Skill label="BOOTSTRAP 5" src={boot} />
               <Skill label="VITE JS" src={vite} />
               <Skill label="Progressive Web Apps" src={pwa} />
+              <Skill label="POSTMAN" src={post} />
             </Flex>
           </Flex>
         </Box>
