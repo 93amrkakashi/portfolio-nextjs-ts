@@ -37,6 +37,7 @@ import word from "../pics/word.svg";
 import pug from "../pics/pug.svg";
 import vite from "../pics/vite.svg";
 import pwa from "../pics/pwa.svg";
+import graph from "../pics/graoh.svg";
 import post from "../pics/postman.svg";
 import Image from "next/image";
 import { divVarient, roboAnimation } from "@/utils/animations";
@@ -130,6 +131,8 @@ function Skills() {
               <Skill label="SASS" src={sass} />
               <Skill label="REACT JS" src={react} />
               <Skill label="NEXT JS" src={next} />
+              <Skill label="NODE JS" src={node} />
+              <Skill label="EXPRESS JS" src={express} />
               <Skill label="REDUX & REDUX TOOLKIT" src={redux} />
             </Flex>
           </Flex>
@@ -271,9 +274,9 @@ function Skills() {
                 isSmallerThn300px: "100%",
               }}
             >
-              <Skill label="NODE JS" src={node} />
-              <Skill label="EXPRESS JS" src={express} />
+              
               <Skill label="WORDPRESS" src={word} />
+              <Skill label="GRAPHQL" src={graph} />
               <Skill label="UI UX" src={ui} />
             </Flex>
           </Flex>
